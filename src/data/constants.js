@@ -142,8 +142,8 @@ export const experiences = [
       "Microservice",
       "Apache Kafka",
       "CI/CD Bamboo",
-      "Junit"
-      "Bitbucket"
+      "Junit",
+      "Bitbucket",
     ],
   },
   {
