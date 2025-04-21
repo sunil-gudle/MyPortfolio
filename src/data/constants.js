@@ -21,7 +21,7 @@ export const skills = [
     skills: [
       {
         name: "Core Java",
-        image: "public/images/javaI.jpeg",
+        image: "/images/javaI.jpeg",
       },
       {
         name: "Spring Framework",
@@ -115,7 +115,7 @@ export const experiences = [
 
   {
     id: 0,
-    img: "public/images/tcs.png",
+    img: "/images/tcs.png",
     role: "It Analyst (Java Backend Developer)",
     company: "TCS",
     date: "Jan 2025 - Present",
@@ -134,7 +134,7 @@ export const experiences = [
 
     {
     id: 1,
-    img: "public/images/wipro.png",
+    img: "/images/wipro.png",
     role: "Senior Project Engineer (Java Back-End Developer)",
     company: "Wipro Limited",
     date: "Oct 2021 - Jan 2025",
@@ -151,7 +151,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "public/images/wipro.png",
+    img: "/images/wipro.png",
     role: "Test Engineer (Automation Testing)",
     company: "Wipro Limited",
     date: "Nov 2019 - Sept 2021",
@@ -171,7 +171,7 @@ export const education = [
 
   {
     id: 0,
-    img: "public/images/BITS.jpeg",
+    img: "/images/BITS.jpeg",
     school: "M-Tech From BITS Pilani",
     date: "Jun 2020 - Nov 2023",
     desc: "I have done my MTech in Software Engineering at BITS Pilani University. This was an integrated program in Wipro. ",
@@ -180,7 +180,7 @@ export const education = [
 
   {
     id: 1,
-    img: "public/images/cocsit.jpg",
+    img: "/images/cocsit.jpg",
     school: "COCSIT College Latur",
     date: "Jun 2016 - May 2019",
     desc: "I completed my B Sc graduation in Computer Science from COCSIT College Latur",
@@ -189,7 +189,7 @@ export const education = [
 
   {
     id: 2,
-    img: "public/images/DSCL.png",
+    img: "/images/DSCL.png",
     school: "Dayanand Science College Latur",
     date: "Jun 2013 - Mar 2015",
     desc: "I completed my class 12th education at Dayanand Science College, Latur, where I studied Science with Electronic Science.",
