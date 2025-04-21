@@ -19,7 +19,10 @@ export const skills = [
   {
     title: "Backend",
     skills: [
-
+      {
+        name: "Core Java",
+        image: "public/images/javaI.jpeg",
+      },
       {
         name: "Spring Framework",
         image: "https://media.licdn.com/dms/image/D4D12AQEICFOK-z0akA/article-cover_image-shrink_720_1280/0/1656604745399?e=2147483647&v=beta&t=-Fjm5QYiJOJNzJ89xGv9VYPNxMNxqIX4jscMWXB6VaM",
@@ -112,7 +115,7 @@ export const experiences = [
 
   {
     id: 0,
-    img: "",
+    img: "public/images/tcs.png",
     role: "It Analyst (Java Backend Developer)",
     company: "TCS",
     date: "Jan 2025 - Present",
@@ -131,7 +134,7 @@ export const experiences = [
 
     {
     id: 1,
-    img: "",
+    img: "public/images/wipro.png",
     role: "Senior Project Engineer (Java Back-End Developer)",
     company: "Wipro Limited",
     date: "Oct 2021 - Jan 2025",
@@ -148,7 +151,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "",
+    img: "public/images/wipro.png",
     role: "Test Engineer (Automation Testing)",
     company: "Wipro Limited",
     date: "Nov 2019 - Sept 2021",
@@ -168,31 +171,30 @@ export const education = [
 
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/C560BAQGVF2qj__3qtg/company-logo_400_400/0/1646318126580?e=2147483647&v=beta&t=m_pWngulU4pmV7TEjPVS2V6BCiKactu8PRf0FGQoWwk",
-    school: "Oriental College Of technology Bhopal",
-    date: "May 2018 - May 2022",
-    desc: "I have done my graducation in Bachelor's degree in Electronic and Communication Engineering at Oriental College Of technology, Bhopal. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. ",
-    degree: "Bachelor of Technology - BTech, Electronic And Communication Engineering",
+    img: "public/images/BITS.jpeg",
+    school: "M-Tech From BITS Pilani",
+    date: "Jun 2020 - Nov 2023",
+    desc: "I have done my MTech in Software Engineering at BITS Pilani University. This was an integrated program in Wipro. ",
+    degree: "Master of Technology - MTech, Software Engineering",
   },
 
   {
     id: 1,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6KtCz4kQ5SEhlbeDe2DO8AuOxdyrW1UmrZKzsnwEfZcmcV0QNJsX2I82DZcfC_Oq_cow&usqp=CAU",
-    school: "Gyan Ganga Internation School Jabalpur",
-    date: "Apr 2017 - Mar 2018",
-    desc: "I completed my class 12 high school education at Gyan Ganga Internation School, Jabalpur, where I studied Science with Computer Science.",
-    degree: "CBSC(XII), Science with Computer",
+    img: "public/images/cocsit.jpg",
+    school: "COCSIT College Latur",
+    date: "Jun 2016 - May 2019",
+    desc: "I completed my B Sc graduation in Computer Science from COCSIT College Latur",
+    degree: "B. Sc. (Computer Science)",
   },
 
   {
     id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6KtCz4kQ5SEhlbeDe2DO8AuOxdyrW1UmrZKzsnwEfZcmcV0QNJsX2I82DZcfC_Oq_cow&usqp=CAU",
-    school: "Gyan Ganga Internation School Jabalpur",
-    date: "Apr 2015 - Mar 2016",
-    desc: "I completed my class 10 education at Gyan Ganga Internation School, Jabalpur, where I studied Science with Computer Application.",
-    degree: "CBSC(X), Science with Computer",
+    img: "public/images/DSCL.png",
+    school: "Dayanand Science College Latur",
+    date: "Jun 2013 - Mar 2015",
+    desc: "I completed my class 12th education at Dayanand Science College, Latur, where I studied Science with Electronic Science.",
+    degree: "HSC Board, Science with Electronics",
   },
-
 
   
 ];
