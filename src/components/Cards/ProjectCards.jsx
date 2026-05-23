@@ -21,6 +21,7 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
+    border: 0.1px solid ${({ theme }) => theme.primary + '20'};
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     padding: 26px 20px;
@@ -30,8 +31,9 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
+        border: 0.1px solid ${({ theme }) => theme.primary};
+        box-shadow: 0 0 20px ${({ theme }) => theme.primary + '30'};
     }
     &:hover ${Button} {
         display: block;

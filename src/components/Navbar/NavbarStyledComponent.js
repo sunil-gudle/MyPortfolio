@@ -2,7 +2,9 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
+    background-color: ${({theme}) => theme.card_light + '99'};
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     height: 80px;
     display: flex;
     align-items: center;
@@ -11,10 +13,12 @@ export const Nav = styled.div`
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 1px solid ${({theme}) => theme.text_secondary + '15'};
     @media (max-width: 960px) {
-        trastion: 0.8s all ease;
+        transition: 0.8s all ease;
     }
 `;
+
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -37,11 +41,14 @@ export const NavLogo = styled(LinkR)`
       padding: 0 0px;
   }
 `;
+
 export const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
     font-size: 18px;
+    color: ${({ theme }) => theme.text_primary};
 `;
+
 export const NavItems = styled.ul`
     width: 100%;
     display: flex;
@@ -62,7 +69,7 @@ export const NavLink = styled.a`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    :hover {
+    &:hover {
       color: ${({ theme }) => theme.primary};
     }
 
@@ -70,7 +77,6 @@ export const NavLink = styled.a`
       border-bottom: 2px solid ${({ theme }) => theme.primary};
     }
 `;
-
 
 export const GitHubButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
@@ -86,13 +92,13 @@ export const GitHubButton = styled.a`
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
-    :hover {
-      background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};     
-    }
-    @media screen and (max-width: 768px) { 
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};     
+  }
+  @media screen and (max-width: 768px) { 
     font-size: 14px;
-    }
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -107,7 +113,6 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-
 export const MobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
@@ -120,7 +125,7 @@ export const MobileIcon = styled.div`
     cursor: pointer;
     color: ${({ theme }) => theme.text_primary};
   }
-`
+`;
 
 export const MobileMenu = styled.div`
     display: flex;
@@ -132,15 +137,16 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 'E6'};
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
-
-`
+`;
 
 export const MobileMenuItems = styled.ul`
   display: flex;
@@ -151,7 +157,7 @@ export const MobileMenuItems = styled.ul`
   list-style: none;
   width: 100%;
   height: 100%;
-`
+`;
 
 export const MobileMenuLink = styled(LinkR)`
   color: ${({ theme }) => theme.text_primary};
@@ -159,7 +165,7 @@ export const MobileMenuLink = styled(LinkR)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  :hover {
+  &:hover {
     color: ${({ theme }) => theme.primary};
   }
 
@@ -183,19 +189,19 @@ export const MobileMenuButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
 
-  :hover {
+  &:hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  :hover {
+  &:hover {
     color: ${({ theme }) => theme.primary};
   }
 
@@ -213,5 +219,29 @@ export const MobileNavLogo = styled(LinkR)`
   text-decoration: none;
   @media (max-width: 640px) {
     padding: 0 0px;
+  }
+`;
+
+export const ColorButton = styled.div`
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-left: 16px;
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+    transform: scale(1.05);
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 8px;
+    align-self: center;
   }
 `;

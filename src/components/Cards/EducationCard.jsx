@@ -36,6 +36,7 @@ text-overflow: ellipsis;
 const Card = styled.div`
     width: 650px;
     border-radius: 10px;
+    border: 0.1px solid ${({ theme }) => theme.primary + '30'};
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
     justify-content: space-between;
@@ -46,8 +47,10 @@ const Card = styled.div`
     gap: 12px;
     transition: all 0.3s ease-in-out;
     &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
         transform: translateY(-5px);
+        border: 0.1px solid ${({ theme }) => theme.primary};
+        box-shadow: 0px 0px 20px ${({ theme }) => theme.primary + '30'};
     }
     @media only screen and (max-width: 768px){
         padding: 10px;
@@ -62,9 +65,7 @@ const Card = styled.div`
     &:hover ${Span}{
         overflow: visible;
         -webkit-line-clamp: unset;
-
     }
-    border: 0.1px solid #854CE6;
 `
 
 const Top = styled.div`

@@ -1,21 +1,21 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink, ColorButton } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaSun, FaMoon } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
-      <NavLogo to='/'>
-  <a href="/" style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20', cursor: 'pointer' }}>
-    <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-  </a>
-</NavLogo>
+        <NavLogo to='/'>
+          <a href="/" style={{ display: "flex", alignItems: "center", color: theme.text_primary, marginBottom: '20px', cursor: 'pointer', textDecoration: 'none' }}>
+            <DiCssdeck size="3rem" style={{ color: theme.primary }} /> <Span>Portfolio</Span>
+          </a>
+        </NavLogo>
 
         <MobileIcon>
           <FaBars onClick={() => {
@@ -31,6 +31,9 @@ const Navbar = () => {
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <ColorButton onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? <FaSun size="18px" /> : <FaMoon size="18px" />}
+          </ColorButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -50,7 +53,10 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            <ColorButton onClick={() => setDarkMode(!darkMode)}>
+              {darkMode ? <FaSun size="18px" /> : <FaMoon size="18px" />}
+            </ColorButton>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content', alignSelf: 'center'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

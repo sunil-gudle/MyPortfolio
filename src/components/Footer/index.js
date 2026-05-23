@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import AddReactionIcon from '@mui/icons-material/AddReaction';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';

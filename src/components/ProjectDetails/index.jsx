@@ -167,7 +167,7 @@ const Button = styled.a`
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
+            background-color: ${theme.bg}99;
         }
     `}
     cursor: pointer;
